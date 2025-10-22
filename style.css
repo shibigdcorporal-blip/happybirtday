@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffb6c1, #ffe6f0);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 50px 40px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.3);
+  animation: fadeIn 1.5s ease;
+}
+
+.title {
+  font-size: 2.5em;
+  text-shadow: 2px 2px 6px rgba(255, 0, 90, 0.6);
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  color: #ffe6f7;
+  animation: glow 2s infinite alternate;
+}
+
+#giftButton {
+  background: linear-gradient(90deg, #ff6b81, #ff8fab);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+}
+
+#giftButton:hover {
+  transform: scale(1.08);
+  background: linear-gradient(90deg, #ff8fab, #ff6b81);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ffb6c1; }
+  to { text-shadow: 0 0 20px #ff69b4; }
+}

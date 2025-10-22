@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffb6c1, #ffd6e8);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 🎀 Container */
+.gift-container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.title {
+  font-size: 2.3em;
+  text-shadow: 2px 2px 5px rgba(255, 0, 90, 0.6);
+  animation: glowTitle 2s infinite alternate;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #ffe6f7;
+  margin-bottom: 25px;
+}
+
+.message-box {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 0 auto;
+  width: 85%;
+  max-width: 800px;
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.05em;
+  color: black;
+  overflow-y: auto;
+  max-height: 75vh;
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.3);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+/* 💗 Button */
+.back-btn {
+  margin-top: 25px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #ff6b81, #ff8fab);
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+}
+
+.back-btn:hover {
+  background: linear-gradient(90deg, #ff8fab, #ff6b81);
+  transform: scale(1.05);
+}
+
+/* 💞 Floating Hearts Animation */
+.floating-hearts {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  opacity: 0.25;
+  animation: floatHearts 8s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatHearts {
+  0% { transform: translateY(0); opacity: 0.2; }
+  50% { transform: translateY(-25px); opacity: 0.4; }
+  100% { transform: translateY(0); opacity: 0.2; }
+}
+
+/* 🌸 Side Images (cute designs sa gilid) */
+.side-img {
+  position: fixed;
+  width: 90px;
+  opacity: 0.9;
+  animation: floatSide 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes floatSide {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Left side designs */
+.left1 {
+  top: 60px;
+  left: 20px;
+  transform: rotate(-15deg);
+}
+.left2 {
+  bottom: 80px;
+  left: 40px;
+  transform: rotate(10deg);
+}
+
+/* Right side designs */
+.right1 {
+  top: 100px;
+  right: 20px;
+  transform: rotate(15deg);
+}
+.right2 {
+  bottom: 60px;
+  right: 40px;
+  transform: rotate(-10deg);
+}
+
+/* 💖 Glow Animation */
+@keyframes glowTitle {
+  from { text-shadow: 0 0 10px #black, 0 0 20px #ff69b4; }
+  to { text-shadow: 0 0 25px #ff1493, 0 0 45px #ff69b4; }
+}
